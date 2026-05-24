@@ -1,31 +1,46 @@
-# Log Parser
+# Log Parser — Kritik Log Filtreleyici
 
-A beginner-friendly Python log parser that filters critical events from large log files.
+Büyük log dosyalarından kritik olayları otomatik olarak ayıklayan, sade Python ile yazılmış bir araç.
 
-## Why I built this
+## Neden yaptım
 
-SOC analysts deal with thousands of log lines every day. 
-Reading them manually is impossible. This script scans all 
-log entries and pulls out only the HIGH and CRITICAL ones — 
-so you focus on what matters first.
+SOC analistleri her gün binlerce log satırıyla çalışır. 
+Bunları elle okumak imkansızdır. Bu script tüm logları 
+tarayarak yalnızca HIGH ve CRITICAL olanları ayırır — 
+önce en önemlilere odaklanmayı sağlar.
 
-## What it does
+## Ne yapar
 
-- Reads a log file line by line
-- Detects severity levels: INFO, WARNING, HIGH, CRITICAL
-- Counts how many of each severity exists
-- Saves HIGH and CRITICAL lines to alerts.txt
-- Prints a summary report
+- Log dosyasını satır satır okur
+- Seviye tespiti yapar: INFO, WARNING, HIGH, CRITICAL
+- Her seviyeden kaç satır olduğunu sayar
+- HIGH ve CRITICAL satırları alerts.txt dosyasına kaydeder
+- Ekrana özet rapor yazdırır
 
-## Usage
+## Kullanım
 
 ```bash
 python log_parser.py sample.log
 ```
 
-Or just run with the default sample file:
+Ya da varsayılan örnek dosyayla:
 ```bash
 python log_parser.py
 ```
 
-## Sample output
+## Örnek çıktı
+LOG OZET RAPORU
+Toplam okunan satir: 20
+INFO     : 9
+WARNING  : 4
+HIGH     : 3
+CRITICAL : 2
+Uyari dosyasina yazilan (HIGH + CRITICAL): 5
+## Teknoloji
+
+- Python 3 — yalnızca yerleşik kütüphaneler kullanıldı
+
+## Motivasyon
+
+Gerçek SOC ortamlarında log analizinin nasıl çalıştığını 
+anlamak ve Python becerilerimi geliştirmek için yaptım.
