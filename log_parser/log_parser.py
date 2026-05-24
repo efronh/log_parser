@@ -5,10 +5,7 @@ import sys
 
 
 def oku_log_dosyasi(dosya_yolu):
-    """
-    Log dosyasini satir satir okur.
-    Her satiri bir liste olarak dondurur.
-    """
+  
     satirlar = []
     dosya = open(dosya_yolu, "r", encoding="utf-8")
     for satir in dosya:
@@ -18,11 +15,7 @@ def oku_log_dosyasi(dosya_yolu):
 
 
 def seviye_bul(satir):
-    """
-    Bir log satirindan seviye bilgisini cikarir.
-    Ornek satir: 2025-05-24 10:00:00 INFO Mesaj metni
-    Tarih ve saatten sonraki kelime seviyedir.
-    """
+  
     temiz = satir.strip()
     if temiz == "":
         return None
@@ -39,10 +32,7 @@ def seviye_bul(satir):
 
 
 def sayim_yap(satirlar):
-    """
-    Her seviye icin kac satir oldugunu sayar.
-    Sozluk dondurur: {"INFO": 5, "WARNING": 3, ...}
-    """
+  
     sayilar = {
         "INFO": 0,
         "WARNING": 0,
@@ -59,9 +49,9 @@ def sayim_yap(satirlar):
 
 
 def uyari_satirlarini_kaydet(satirlar, cikti_dosyasi):
-    """
-    HIGH ve CRITICAL seviyeli satirlari alerts.txt dosyasina yazar.
-    """
+ 
+    #HIGH ve CRITICAL seviyeli satirlari alerts.txt dosyasina yazar.
+
     dosya = open(cikti_dosyasi, "w", encoding="utf-8")
     for satir in satirlar:
         seviye = seviye_bul(satir)
@@ -73,9 +63,7 @@ def uyari_satirlarini_kaydet(satirlar, cikti_dosyasi):
 
 
 def rapor_yazdir(sayilar, toplam_satir):
-    """
-    Ozet raporu ekrana yazdirir.
-    """
+   
     print("")
     print("=" * 40)
     print("LOG OZET RAPORU")
@@ -94,10 +82,7 @@ def rapor_yazdir(sayilar, toplam_satir):
 
 
 def main():
-    """
-    Programin ana giris noktasi.
-    Komut satirindan dosya adi alir; verilmezse sample.log kullanilir.
-    """
+  
     if len(sys.argv) > 1:
         log_dosyasi = sys.argv[1]
     else:
