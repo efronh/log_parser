@@ -1,0 +1,20 @@
+2025-05-24 08:00:01 INFO Uygulama baslatildi
+2025-05-24 08:00:15 INFO Veritabani baglantisi kuruldu
+2025-05-24 08:01:22 INFO Kullanici giris yapti: ahmet
+2025-05-24 08:05:44 WARNING Disk kullanimi %75 seviyesinde
+2025-05-24 08:10:03 INFO Gunluk yedekleme tamamlandi
+2025-05-24 08:15:30 WARNING API yanit suresi yavas: 3.2 saniye
+2025-05-24 08:20:11 INFO E-posta kuyrugu islendi: 42 mesaj
+2025-05-24 08:25:55 HIGH Bellek kullanimi kritik esige yakin: %92
+2025-05-24 08:30:02 INFO Oturum suresi doldu: kullanici_12
+2025-05-24 08:35:18 WARNING SSL sertifikasi 14 gun icinde sona erecek
+2025-05-24 08:40:07 INFO Dosya yukleme basarili: rapor.pdf
+2025-05-24 08:45:33 CRITICAL Veritabani baglantisi kesildi
+2025-05-24 08:50:21 INFO Cache temizlendi
+2025-05-24 08:55:09 HIGH CPU kullanimi %98 - islemci tikaniyor
+2025-05-24 09:00:44 WARNING Basarisiz giris denemesi: 5 kez
+2025-05-24 09:05:12 INFO Yeni kullanici kaydi: zeynep
+2025-05-24 09:10:28 CRITICAL Ana sunucu yanit vermiyor
+2025-05-24 09:15:50 INFO Haftalik rapor olusturuldu
+2025-05-24 09:20:37 HIGH Ag trafigi anormal: 5000 istek/dakika
+2025-05-24 09:25:04 WARNING Gecici dosya klasoru dolmak uzere
